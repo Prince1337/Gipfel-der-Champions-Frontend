@@ -1,0 +1,31 @@
+.table-responsive {
+    overflow-x: auto;
+  }
+  
+  th, td {
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 767px) {
+    .table {
+      font-size: 0.875rem;
+    }
+    
+    .table th, .table td {
+      padding: 0.5rem 0.25rem;
+    }
+    
+    .btn-sm {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  
+  fa-icon {
+    cursor: pointer;
+    color: rgb(108, 162, 233);
+  }

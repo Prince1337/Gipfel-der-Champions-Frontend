@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Analytics, getAnalytics, logEvent } from '@angular/fire/analytics';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,4 +11,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'f1-champions';
+  private analytics: Analytics = inject(Analytics);
+
+  constructor() {
+    logEvent(this.analytics, 'app_opened');
+  }
 }
